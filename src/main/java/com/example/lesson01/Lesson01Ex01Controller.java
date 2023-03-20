@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/lesson01/ex01") // 공통된거 적음.
-@Controller		// Spring container가 관리해주는 Spring bean // controllerdhk requestmapping 쌍임.
+@Controller		// Spring container가 관리해주는 Spring bean // controller와 requestmapping 쌍임.
 public class Lesson01Ex01Controller {
 	
 	// http://localhost:8080/lesson01/ex01/1
