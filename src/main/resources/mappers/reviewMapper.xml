@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  <!-- dtd문법 -->
+ 
+<mapper namespace="com.example.lesson03.dao.ReviewMapper"> <!-- mapper패키지명 써야됨.공백 없이 주의 -->
+
+	<!-- mapper 인터페이스의 메소드 이름이 아이디 됨.  하나의 행은  model패키지명 써야됨.-->
+	<select id="selectReview" parameterType="int" resultType="com.example.lesson03.model.Review">
+		SELECT
+			`id`
+			,`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		FROM 
+			`new_review`
+		WHERE
+			`id` = #{id}
+	</select>
+
+
+</mapper>
