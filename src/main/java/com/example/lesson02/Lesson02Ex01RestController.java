@@ -18,7 +18,7 @@ public class Lesson02Ex01RestController {
 	
 		// http://localhost/lesson02/ex01
 		@RequestMapping("/lesson02/ex01")  //**View 연결 // url path 매핑 // 그냥 주소임. 메소드와 연관 없음.
-		public List<UsedGoods> ex01() {
+		public List<UsedGoods> ex01() {  // UsedGoods - model명 
 			List<UsedGoods> usedGoodsList = usedGoodsBo.getUsedGoodsList();  //**BO와 연결. //  DB에서 가져오는 거기 때문에
 			return usedGoodsList;  // list -> JSON String      Response body에 들어감.
 			
