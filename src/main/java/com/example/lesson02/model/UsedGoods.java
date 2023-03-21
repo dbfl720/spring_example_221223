@@ -2,6 +2,13 @@ package com.example.lesson02.model;
 
 import java.util.Date;
 
+
+//Model == Entity == (DTO)
+//Database의 테이블 데이터를 담기 위한 객체
+//field와 Getter, Setter만 갖는 순수한 Java Bean 객체(new로 생성)
+//테이블 컬럼과 일치하는 필드로만 구성
+
+
 public class UsedGoods {
 	private int id;
 	private int sellerId;
