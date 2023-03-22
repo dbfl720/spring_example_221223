@@ -22,4 +22,54 @@
 	</select>
 
 
+	<!-- insert는 result 타입 안씀. insert는 할때는 id 생략. -->
+	<insert id="insertReview" parameterType="com.example.lesson03.model.Review">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			,#{menu}
+			,#{userName}
+			,#{point}
+			,#{review}
+			,NOW()
+			,NOW()
+		)
+	</insert>
+	<!-- NOW() mybatis 함수이다.  -->
+	
+	
+	
+	<insert id="insertReviewAsField" parameterType="map">
+		INSERT INTO `new_review`
+		(
+			`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{storeId}
+			,#{menu}
+			,#{userName}
+			,#{point}
+			,#{review}
+			,NOW()
+			,NOW()
+		)
+	
+	</insert>
 </mapper>
