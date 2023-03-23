@@ -36,4 +36,15 @@ public class ReviewBO {
 		return reviewMapper.insertReviewAsField(storeId111, menu111, userName111, point111, review111);
 	}
 	
+	
+	// input: id, review   output: 성공된 행의 개수 int
+	public int updateReviewById(int id, String review) {// by 뒤는 where절임.
+		return reviewMapper.updateReviewById(id, review);
+	
+	}
+	
+	// output : x
+	public void deleteReviewById(int id) { // where 절에 들어가는건 다 By뒤에 쓰면 됨.
+		reviewMapper.deleteReviewById(id);
+	}
 }

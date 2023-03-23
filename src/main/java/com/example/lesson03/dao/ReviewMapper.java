@@ -25,4 +25,13 @@ public interface ReviewMapper {
 			@Param("point") Double point333,
 			@Param("review") String review333);
 	
+	
+	public int updateReviewById(
+			@Param("id")int id,
+			@Param("review")String review); 
+	
+	
+	
+	public void deleteReviewById(int id); // 한개라서 @Param 안써도 됨. 
+	
 }
