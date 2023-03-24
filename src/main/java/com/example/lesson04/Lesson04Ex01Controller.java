@@ -16,7 +16,7 @@ public class Lesson04Ex01Controller {
 	@Autowired
 	private UserBO userBO;
 	
-	
+//	, method=RequestMethod.GET
 	// localhost/lesson04/ex01/add_user_view  
 	// 하나의 경로만(get) 지정하고 싶으면  - method=RequestMethod.GET
 	@RequestMapping(path="/add_user_view", method=RequestMethod.GET)  // RequestMapping - 모든 메소드 허용함 get, post 등
@@ -30,22 +30,15 @@ public class Lesson04Ex01Controller {
 	@PostMapping("/add_user") //post방식으로만 허용되는 주소만 들어옴
 	public String addUser(
 			@RequestParam("name") String name,   // *** addUser에 있는 name이 @RequestParam("name")들어감.
-			@RequestParam("yyyymmdd") String yyyymmdd,
-			@RequestParam(value="email", required=false) String email, //비필수라서 
-			@RequestParam(value="introduce", required=false) String introduce) { 
+			@RequestParam("yyyymmdd") String yyyymmdd, // @RequestParam("") - 주소 쓸 때 쓰이는 파라미터 
+			@RequestParam(value="email", required=false) String email, //비필수라서  // null 허용해서..?????
+			@RequestParam(value="introduce", required=false) String introduce) {   // null 허용해서..?????
 			
 		
 		//insert DB // 요청 //쿼리로 작성..
 		// UserBO UserMapper userMapper.xml User
-		
-		userBO.addUserAsField()
-		
-		
-		
-		
-		
-		
-		
+		userBO.addUserAsField(name,yyyymmdd,email,introduce);
+
 		
 		// 결과 jsp view  // 응답
 		return "lesson04/afterAddUser";  // 실제 코드가 수행되는 곳에 디버깅 브레이크포인트 거는 거임.

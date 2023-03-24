@@ -43,7 +43,7 @@ public class ReviewBO {
 	
 	}
 	
-	// output : x
+	// input : id    output : x
 	public void deleteReviewById(int id) { // where 절에 들어가는건 다 By뒤에 쓰면 됨.
 		reviewMapper.deleteReviewById(id);
 	}
