@@ -1,9 +1,8 @@
 # Spring 에러 모음
 
 
-# 1. 에러 - Column count doesn't match value count at row 
+-1. 에러 - Column count doesn't match value count at row 
 
-- 🌳 해결 방법
 🌾 원인 :xml 쿼리에서 createAT, updatedAt 안써서 values와 매칭이 안됬다.
 
 🌾 해결 방법 : xml쿼리를 insert 부분과 values 부분 매칭 되게 수정.
@@ -19,9 +18,8 @@
 
 
 
-# 2. 에러 - org.apache.ibatis.binding.BindingException
+- 2. 에러 - org.apache.ibatis.binding.BindingException
 
-- 🌳 해결 방법
 🌾 원인 : XML(Mapper) directory 경로 문제      src/main/resources -> mappers -> User.xml     // Mapper명을 뒤에 안 붙임.
 
 🌾 해결 방법 : Mapper 명을 뒤에  붙이기.
