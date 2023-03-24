@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>결과</title>
+
 </head>
 <body>
 	<h1>회원가입 성공!!!</h1>
