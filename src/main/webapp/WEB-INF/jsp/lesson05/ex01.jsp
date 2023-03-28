@@ -22,7 +22,7 @@
 	<c:out value="<script>alert('alert창 띄우기')</script>" /><br>
 	<c:out value="<script>alert('alert창 띄우기')</script>" escapeXml="true" /><br>
 	<%-- escapeXml="false"  - 스크립트가  수행된다. --%>
-	<%-- <c:out value="<script>alert('alert창 띄우기')</script>" escapeXml="false" /><br> --%> 
+	 <c:out value="<script>alert('alert창 띄우기')</script>" escapeXml="false" /><br> 
 	
 	<h2>3. 조건문 (c:if)</h2>
 	<c:if test="${number1 > 50}">
@@ -35,6 +35,7 @@
 		number1은 100과 같다. <br>
 	</c:if>
 	<c:if test="${number1 ne 222 }">
+		number1은 222가 아니다.<br>
 	</c:if>
 	<c:if test="${!empty number1}">
 		number1은 비어있지 않다. <br>
