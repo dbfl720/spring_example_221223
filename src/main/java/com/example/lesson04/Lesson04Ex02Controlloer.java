@@ -30,8 +30,10 @@ public class Lesson04Ex02Controlloer {
 	//localhost/lesson04/ex02/add_student_view/add_student
 	@PostMapping("/add_student") // get 허용 안되게 PostMapping
 	public String addStudent(	
-			// name 속성의 파라미터명과 일치하는 필드에 값이 들어간다. 자동으로 setter가 불려진다.
-			@ModelAttribute Student student,
+			// ****name 속성의 파라미터명과 일치하는 필드에 값이 들어간다. 자동으로 setter가 불려진다. //???name??
+			//@RequestParam 어노테이션 대신 사용한다.
+			//폼 태그의 name 속성과 DTO 객체의 필드명이 일치하는 데이터를 세팅해서 객체로 한번에 받아온다.
+			@ModelAttribute Student student, 		
 			Model model) {
 		
 		//** 흐름 중요 **
@@ -43,7 +45,7 @@ public class Lesson04Ex02Controlloer {
 		
 		
 		// Model에 데이터를 담는다. (mvc)
-		model.addAttribute("result", latestStudent); // ""안에 값으 jsp로 보내질 값. (el문법)
+		model.addAttribute("result", latestStudent); // ""안에 값은 jsp로 보내질 값. (el문법)
 		model.addAttribute("title", "최근 가입된 학생 정보");
 		
 		
