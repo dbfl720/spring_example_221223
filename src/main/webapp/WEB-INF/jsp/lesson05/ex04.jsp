@@ -9,7 +9,7 @@
 <title>JSTL fn 라이브러리</title>
 </head>
 <body>
-	<c:set var="str1" value="No pain. No gain." />
+	<c:set var="str1" value="No pain.No gain." />
 	
 	<h3>1. 길이 구하기</h3>
 	${fn:length(str1)}
@@ -37,8 +37,7 @@
 	${fn:replace(str2, '치킨', '떡볶이') }
 	
 	<h3> 6. 구분자로 잘라서 배열 만들기</h3>
-	${fn:split(str1, '.')[0]} <br>
-	${fn:split(str1, '.')[1]}
+	<pre>${fn:split(str1, '.')[0]}${fn:split(str1, '.')[1]}</pre>
 	
 	
 	<h3>7. 시작 인덱스부터 종료 인덱스까지 자르기</h3>
