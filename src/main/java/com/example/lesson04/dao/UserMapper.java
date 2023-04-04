@@ -19,5 +19,9 @@ public interface UserMapper {
 	
 	
 	public User selectLatestUser();
+	
+	
+	// 0: 거짓(중복x)   그 외 : 참 (중복)
+	public boolean existUserByName(String name);
 }
 
