@@ -26,7 +26,7 @@ public class Lesson06Controller {
 	
 	// *** AJAX 통신으로 오는 요청 결과는 반드시 String이다. 반드시 return 해야됨. // *** 반드시 @ResponseBody 있어야됨.
 	@PostMapping("/add_user") 
-	@ResponseBody 
+	@ResponseBody  //  데이터를 돌려주는 어노테이션/ 웹 주소로 요청하면, 웹사이트 View 화면이 아닌 json 같은 데이터를 응답값으로 보내준다. 컨트롤러 메소드의 리턴값이 데이터가 되어, Response 응답값의 body 영역에 넣어 보낸다. 만약 String을 리턴한 경우 텍스트 기반 HTML 형식으로 response body에 나타난다.
 	public String addUser(  // 필수, 비필수는 db에서 확인
 			@RequestParam("name") String name,  
 			@RequestParam("yyyymmdd") String yyyymmdd,

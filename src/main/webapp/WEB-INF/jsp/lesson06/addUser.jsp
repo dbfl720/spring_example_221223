@@ -40,6 +40,7 @@
 	
 <script>
 	$(document).ready(function(){
+		
 		// (1) jquery의 submit 기능 이용하기
 		/* /*
 		$("form").on("submit", function(e) {      // e: event 약자.  // document - 모든 문서.
@@ -47,7 +48,7 @@
 			// alert("서브밋 버튼 클릭");
 			
 			// validation
-			let name = ${"#name"}.val().trim();
+			let name = $("#name").val().trim();
 			if (!name) {       // name == ""
 				alert("이름을 입력하세요.");
 				return false;    // ** submit 안함. 
@@ -65,7 +66,7 @@
 		
 		// (2) jquery의 AJAX 통신을 이용하기
 		$("#addBtn").on("click", function() {
-			alert("버튼 클릭");
+			//alert("버튼 클릭");
 			
 			// validation
 			let name = $("#name").val().trim();
@@ -88,18 +89,20 @@
 			console.log(email);
 			console.log(introduce);
 			
+			
+			
 			// AJAX: 폼태그와 상관없이 비동기로 별도 요청 (Request)  // 브라우저가 하는 일을 개발자가 다 함.
 			$.ajax({
 				// request 
 				type:"POST"
-				, url:"/lesson06/ex01/add_user"
+				, url:"/lesson06/ex01/add_user"     
 				, data:{"name":name, "yyyymmdd":yyyymmdd, "email":email, "introduce":introduce}  //request parma 이름(왼쪽) / 변수 (오른쪽) // 변수 없으면 작동 안됨.
 				
 				
 				// response 
 				, success:function(data) { // data는 성공이 오는 거임. // data : response에 오는 결과 응답. (변수)  // ** 응답은 항상 string.
 					
-					if(data == "성공") {
+					if(data == "성공") {      // "성공" 단어가 controller에 있는 "성공"단어와 일치해야 하나???????????????????
 						location.href ="/lesson06/ex01/result_view";
 					}
 					
