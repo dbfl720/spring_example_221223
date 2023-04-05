@@ -74,6 +74,7 @@ $(document).ready(function() {
 				alert("서버호출 가능");
 			} else {
 				alert("서버호출 불가");
+				
 			}
 			
 		});
